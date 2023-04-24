@@ -4,4 +4,12 @@ import yextSSG from "@yext/pages/vite-plugin";
 
 export default defineConfig({
   plugins: [react(), yextSSG()],
+  build: {
+    rollupOptions: {
+      output: {
+        generatedCode: "es2015",
+        sourcemap: true
+      }
+    }
+  }
 });

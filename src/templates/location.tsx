@@ -9,6 +9,7 @@
  */
 
 import * as React from "react";
+import { css } from "@emotion/react";
 import {
   GetHeadConfig,
   GetPath,
@@ -28,7 +29,7 @@ import Details from "../components/Details";
 import Hours from "../components/Hours";
 import PageLayout from "../components/PageLayout";
 import EditTool from "../components/EditTool";
-import BreadCrumbs from "../components/Breadcrumbs";
+import Button from "@mui/material/Button";
 
 /**
  * Required when Knowledge Graph data is used for a template.
@@ -114,6 +115,13 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         },
       },
       {
+        type: "meta",
+        attributes: {
+          name: "viewport",
+          content: "initial-scale=1, width=device-width",
+        },
+      },
+      {
         type: "link",
         attributes: {
           rel: "icon",
@@ -158,6 +166,7 @@ const Location: Template<TemplateRenderProps> = ({
             {hours && <Hours title={"Restaurant Hours"} hours={hours} />}
             {description && <About name={name} description={description} />}
           </div>
+          <Button variant="outlined" color="error">Hello World</Button>
         </div>
       </PageLayout>
       {/* This component displays a link to the entity that represents the given page in the Knowledge Graph*/}
