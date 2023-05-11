@@ -1,5 +1,10 @@
 module.exports = {
   content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
+  safelist: [
+    {
+      pattern: /^text-[a-z]+-[0-9]+$/
+    }
+  ],
   theme: {
     extend: {
       colors: {
