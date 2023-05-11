@@ -9,7 +9,6 @@
  */
 
 import * as React from "react";
-import { css } from "@emotion/react";
 import {
   GetHeadConfig,
   GetPath,
@@ -20,16 +19,10 @@ import {
   TemplateProps,
   TemplateRenderProps,
 } from "@yext/pages";
-import { isProduction } from "@yext/pages/util";
 import "../index.css";
-import Favicon from "../assets/images/yext-favicon.ico";
-import About from "../components/About";
-import Banner from "../components/Banner";
-import Details from "../components/Details";
-import Hours from "../components/Hours";
+
 import PageLayout from "../components/PageLayout";
-import EditTool from "../components/EditTool";
-import Button from "@mui/material/Button";
+import { LexicalRichText } from "@yext/react-components";
 
 /**
  * Required when Knowledge Graph data is used for a template.
@@ -120,15 +113,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           name: "viewport",
           content: "initial-scale=1, width=device-width",
         },
-      },
-      {
-        type: "link",
-        attributes: {
-          rel: "icon",
-          type: "image/x-icon",
-          href: Favicon,
-        },
-      },
+      }
     ],
   };
 };
@@ -159,20 +144,11 @@ const Location: Template<TemplateRenderProps> = ({
   return (
     <>
       <PageLayout>
-        <Banner name={name} address={address} />
-        <div className="centered-container">
-          <div className="grid gap-x-10 gap-y-10 md:grid-cols-2">
-            <Details address={address} phone={mainPhone} services={services} />
-            {hours && <Hours title={"Restaurant Hours"} hours={hours} />}
-            {description && <About name={name} description={description} />}
-          </div>
-          <Button variant="outlined" color="error">Hello World</Button>
-        </div>
+        <LexicalRichText serializedAST={JSON.stringify(AST)} />
       </PageLayout>
-      {/* This component displays a link to the entity that represents the given page in the Knowledge Graph*/}
-      {!isProduction(siteDomain) && <EditTool data={document} />}
     </>
   );
 };
 
+const AST = {"root":{"children":[{"children":[],"direction":null,"format":"","indent":0,"type":"paragraph","version":1},{"children":[{"detail":0,"format":0,"mode":"normal","style":"","text":"const","type":"code-highlight","version":1,"highlightType":"keyword"},{"detail":0,"format":0,"mode":"normal","style":"","text":" ","type":"code-highlight","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"Location","type":"code-highlight","version":1,"highlightType":"literal-property"},{"detail":0,"format":0,"mode":"normal","style":"","text":":","type":"code-highlight","version":1,"highlightType":"operator"},{"detail":0,"format":0,"mode":"normal","style":"","text":" Template","type":"code-highlight","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"<","type":"code-highlight","version":1,"highlightType":"operator"},{"detail":0,"format":0,"mode":"normal","style":"","text":"TemplateRenderProps","type":"code-highlight","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":">","type":"code-highlight","version":1,"highlightType":"operator"},{"detail":0,"format":0,"mode":"normal","style":"","text":" ","type":"code-highlight","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"=","type":"code-highlight","version":1,"highlightType":"operator"},{"detail":0,"format":0,"mode":"normal","style":"","text":" ","type":"code-highlight","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"(","type":"code-highlight","version":1,"highlightType":"punctuation"},{"detail":0,"format":0,"mode":"normal","style":"","text":"{","type":"code-highlight","version":1,"highlightType":"punctuation"},{"type":"linebreak","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"  relativePrefixToRoot","type":"code-highlight","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":",","type":"code-highlight","version":1,"highlightType":"punctuation"},{"type":"linebreak","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"  document","type":"code-highlight","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":",","type":"code-highlight","version":1,"highlightType":"punctuation"},{"type":"linebreak","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"}","type":"code-highlight","version":1,"highlightType":"punctuation"},{"detail":0,"format":0,"mode":"normal","style":"","text":")","type":"code-highlight","version":1,"highlightType":"punctuation"},{"detail":0,"format":0,"mode":"normal","style":"","text":" ","type":"code-highlight","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"=>","type":"code-highlight","version":1,"highlightType":"operator"},{"detail":0,"format":0,"mode":"normal","style":"","text":" ","type":"code-highlight","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"{","type":"code-highlight","version":1,"highlightType":"punctuation"},{"type":"linebreak","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"  ","type":"code-highlight","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"return","type":"code-highlight","version":1,"highlightType":"keyword"},{"detail":0,"format":0,"mode":"normal","style":"","text":" ","type":"code-highlight","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"(","type":"code-highlight","version":1,"highlightType":"punctuation"},{"type":"linebreak","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"    ","type":"code-highlight","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"<","type":"code-highlight","version":1,"highlightType":"operator"},{"detail":0,"format":0,"mode":"normal","style":"","text":">","type":"code-highlight","version":1,"highlightType":"operator"},{"type":"linebreak","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"      ","type":"code-highlight","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"<","type":"code-highlight","version":1,"highlightType":"operator"},{"detail":0,"format":0,"mode":"normal","style":"","text":"PageLayout","type":"code-highlight","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":">","type":"code-highlight","version":1,"highlightType":"operator"},{"type":"linebreak","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"        ","type":"code-highlight","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"<","type":"code-highlight","version":1,"highlightType":"operator"},{"detail":0,"format":0,"mode":"normal","style":"","text":"LexicalRichText serializedAST","type":"code-highlight","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"=","type":"code-highlight","version":1,"highlightType":"operator"},{"detail":0,"format":0,"mode":"normal","style":"","text":"\"\"","type":"code-highlight","version":1,"highlightType":"string"},{"detail":0,"format":0,"mode":"normal","style":"","text":" ","type":"code-highlight","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"/","type":"code-highlight","version":1,"highlightType":"operator"},{"detail":0,"format":0,"mode":"normal","style":"","text":">","type":"code-highlight","version":1,"highlightType":"operator"},{"type":"linebreak","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"      ","type":"code-highlight","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"<","type":"code-highlight","version":1,"highlightType":"operator"},{"detail":0,"format":0,"mode":"normal","style":"","text":"/","type":"code-highlight","version":1,"highlightType":"operator"},{"detail":0,"format":0,"mode":"normal","style":"","text":"PageLayout","type":"code-highlight","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":">","type":"code-highlight","version":1,"highlightType":"operator"},{"type":"linebreak","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"    ","type":"code-highlight","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"<","type":"code-highlight","version":1,"highlightType":"operator"},{"detail":0,"format":0,"mode":"normal","style":"","text":"/","type":"code-highlight","version":1,"highlightType":"operator"},{"detail":0,"format":0,"mode":"normal","style":"","text":">","type":"code-highlight","version":1,"highlightType":"operator"},{"type":"linebreak","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"  ","type":"code-highlight","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":")","type":"code-highlight","version":1,"highlightType":"punctuation"},{"detail":0,"format":0,"mode":"normal","style":"","text":";","type":"code-highlight","version":1,"highlightType":"punctuation"},{"type":"linebreak","version":1},{"detail":0,"format":0,"mode":"normal","style":"","text":"}","type":"code-highlight","version":1,"highlightType":"punctuation"},{"detail":0,"format":0,"mode":"normal","style":"","text":";","type":"code-highlight","version":1,"highlightType":"punctuation"},{"type":"linebreak","version":1}],"direction":"ltr","format":"","indent":0,"type":"code","version":1,"language":"javascript"}],"direction":"ltr","format":"","indent":0,"type":"root","version":1}}
 export default Location;

@@ -8,7 +8,6 @@ export default defineConfig({
     rollupOptions: {
       output: {
         generatedCode: "es2015",
-        sourcemap: true
       }
     }
   }
