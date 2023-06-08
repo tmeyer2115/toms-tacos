@@ -22,7 +22,7 @@ import {
 import "../index.css";
 
 import PageLayout from "../components/PageLayout";
-import { Markdown } from "@yext/react-components";
+import { LexicalRichText } from "@yext/react-components";
 
 /**
  * Required when Knowledge Graph data is used for a template.
@@ -144,10 +144,288 @@ const Location: Template<TemplateRenderProps> = ({
   return (
     <>
       <PageLayout>
-        <Markdown content="**blah**"/>
+        <LexicalRichText serializedAST={JSON.stringify(LEXICAL_RICH_TEXT_SERIALIZED_AST)}/>
       </PageLayout>
     </>
   );
 };
+
+export const LEXICAL_RICH_TEXT_SERIALIZED_AST = {
+  "root": {
+      "children": [
+          {
+              "children": [],
+              "direction": null,
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1
+          },
+          {
+              "children": [
+                  {
+                      "children": [
+                          {
+                              "children": [
+                                  {
+                                      "children": [],
+                                      "direction": null,
+                                      "format": "",
+                                      "indent": 0,
+                                      "type": "paragraph",
+                                      "version": 1
+                                  }
+                              ],
+                              "direction": null,
+                              "format": "",
+                              "headerState": 3,
+                              "indent": 0,
+                              "type": "tablecell",
+                              "version": 1,
+                              "width": null
+                          },
+                          {
+                              "children": [
+                                  {
+                                      "children": [],
+                                      "direction": null,
+                                      "format": "",
+                                      "indent": 0,
+                                      "type": "paragraph",
+                                      "version": 1
+                                  }
+                              ],
+                              "direction": null,
+                              "format": "",
+                              "headerState": 1,
+                              "indent": 0,
+                              "type": "tablecell",
+                              "version": 1,
+                              "width": null
+                          },
+                          {
+                              "children": [
+                                  {
+                                      "children": [],
+                                      "direction": null,
+                                      "format": "",
+                                      "indent": 0,
+                                      "type": "paragraph",
+                                      "version": 1
+                                  }
+                              ],
+                              "direction": null,
+                              "format": "",
+                              "headerState": 1,
+                              "indent": 0,
+                              "type": "tablecell",
+                              "version": 1,
+                              "width": null
+                          }
+                      ],
+                      "direction": null,
+                      "format": "",
+                      "height": null,
+                      "indent": 0,
+                      "type": "tablerow",
+                      "version": 1
+                  },
+                  {
+                      "children": [
+                          {
+                              "children": [
+                                  {
+                                      "children": [
+                                          {
+                                              "detail": 0,
+                                              "format": 0,
+                                              "mode": "normal",
+                                              "style": "",
+                                              "text": "test",
+                                              "type": "text",
+                                              "version": 1
+                                          }
+                                      ],
+                                      "direction": "ltr",
+                                      "format": "",
+                                      "indent": 0,
+                                      "type": "paragraph",
+                                      "version": 1
+                                  }
+                              ],
+                              "direction": null,
+                              "format": "",
+                              "headerState": 2,
+                              "indent": 0,
+                              "type": "tablecell",
+                              "version": 1,
+                              "width": null
+                          },
+                          {
+                              "children": [
+                                  {
+                                      "children": [
+                                          {
+                                              "detail": 0,
+                                              "format": 0,
+                                              "mode": "normal",
+                                              "style": "",
+                                              "text": "test",
+                                              "type": "text",
+                                              "version": 1
+                                          }
+                                      ],
+                                      "direction": "ltr",
+                                      "format": "",
+                                      "indent": 0,
+                                      "type": "paragraph",
+                                      "version": 1
+                                  }
+                              ],
+                              "direction": null,
+                              "format": "",
+                              "headerState": 0,
+                              "indent": 0,
+                              "type": "tablecell",
+                              "version": 1,
+                              "width": null
+                          },
+                          {
+                              "children": [
+                                  {
+                                      "children": [
+                                          {
+                                              "detail": 0,
+                                              "format": 0,
+                                              "mode": "normal",
+                                              "style": "",
+                                              "text": "test",
+                                              "type": "text",
+                                              "version": 1
+                                          }
+                                      ],
+                                      "direction": "ltr",
+                                      "format": "",
+                                      "indent": 0,
+                                      "type": "paragraph",
+                                      "version": 1
+                                  }
+                              ],
+                              "direction": null,
+                              "format": "",
+                              "headerState": 0,
+                              "indent": 0,
+                              "type": "tablecell",
+                              "version": 1,
+                              "width": null
+                          }
+                      ],
+                      "direction": null,
+                      "format": "",
+                      "height": null,
+                      "indent": 0,
+                      "type": "tablerow",
+                      "version": 1
+                  },
+                  {
+                      "children": [
+                          {
+                              "children": [
+                                  {
+                                      "children": [
+                                          {
+                                              "altText": "24x25.png",
+                                              "height": 25,
+                                              "maxWidth": 500,
+                                              "src": "https://a.mktgcdn.com/p/cp1O7HKLEyQ4uW7B9LDO-tvwgqTKIYlI2_Ag0-s0IiM/24x25.png",
+                                              "type": "image",
+                                              "version": 1,
+                                              "width": 24
+                                          }
+                                      ],
+                                      "direction": null,
+                                      "format": "",
+                                      "indent": 0,
+                                      "type": "paragraph",
+                                      "version": 1
+                                  }
+                              ],
+                              "direction": null,
+                              "format": "",
+                              "headerState": 2,
+                              "indent": 0,
+                              "type": "tablecell",
+                              "version": 1,
+                              "width": null
+                          },
+                          {
+                              "children": [
+                                  {
+                                      "children": [],
+                                      "direction": "ltr",
+                                      "format": "",
+                                      "indent": 0,
+                                      "type": "paragraph",
+                                      "version": 1
+                                  }
+                              ],
+                              "direction": null,
+                              "format": "",
+                              "headerState": 0,
+                              "indent": 0,
+                              "type": "tablecell",
+                              "version": 1,
+                              "width": null
+                          },
+                          {
+                              "children": [
+                                  {
+                                      "children": [],
+                                      "direction": "ltr",
+                                      "format": "",
+                                      "indent": 0,
+                                      "type": "paragraph",
+                                      "version": 1
+                                  }
+                              ],
+                              "direction": null,
+                              "format": "",
+                              "headerState": 0,
+                              "indent": 0,
+                              "type": "tablecell",
+                              "version": 1,
+                              "width": null
+                          }
+                      ],
+                      "direction": null,
+                      "format": "",
+                      "height": null,
+                      "indent": 0,
+                      "type": "tablerow",
+                      "version": 1
+                  }
+              ],
+              "direction": null,
+              "format": "",
+              "indent": 0,
+              "type": "table",
+              "version": 1
+          },
+          {
+              "children": [],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1
+          }
+      ],
+      "direction": null,
+      "format": "",
+      "indent": 0,
+      "type": "root",
+      "version": 1
+  }
+}
 
 export default Location;
